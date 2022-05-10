@@ -1,0 +1,17 @@
+{
+  "name": "@whppt/mailchimp",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:whpptjs/whppt-mailchimp.git",
+  "author": "Svelte Team <support@sveltestudios.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue .",
+    "release:patch": "standard-version --release-as patch && yarn publish && git push --follow-tags",
+    "release:minor": "standard-version --release-as minor && yarn publish && git push --follow-tags",
+    "release:major": "standard-version --release-as major && yarn publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "eslint": "^8.15.0"
+  }
+}
