@@ -1,6 +1,6 @@
 {
   "name": "@whppt/mailchimp",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "lib/module.js",
   "repository": "git@github.com:whpptjs/whppt-mailchimp.git",
   "author": "Svelte Team <support@sveltestudios.com>",
