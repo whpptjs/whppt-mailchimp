@@ -5,6 +5,9 @@
   "repository": "git@github.com:whpptjs/whppt-mailchimp.git",
   "author": "Svelte Team <support@sveltestudios.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint --ext .js,.vue .",
     "release:patch": "standard-version --release-as patch && yarn publish && git push --follow-tags",
