@@ -57,10 +57,14 @@ import { clone } from 'lodash';
 import WhpptTextInput from '@whppt/nuxt/lib/components/ui/components/Input';
 import WhpptButton from '@whppt/nuxt/lib/components/ui/components/Button';
 import WhpptCheckbox from '@whppt/nuxt/lib/components/ui/components/Checkbox';
+import ArrowUp from '@whppt/nuxt/lib/components/icons/ArrowUp';
+import ArrowDown from '@whppt/nuxt/lib/components/icons/ArrowDown';
+import Add from '@whppt/nuxt/lib/components/icons/Add';
+import Trash from '@whppt/nuxt/lib/components/icons/Trash';
 
 export default {
   name: 'WhpptMailchimpSubscribeEditor',
-  components: { WhpptTextInput, WhpptButton, WhpptCheckbox },
+  components: { WhpptTextInput, WhpptButton, WhpptCheckbox, ArrowUp, ArrowDown, Add, Trash },
   data() {
     return {
       newFieldId: '',
