@@ -1,6 +1,6 @@
 <template>
   <div class="mailchimp-subscribe-form" :class="{ 'mailchimp-subscribe-form--loading': loading }">
-    <div v-if="inEditor" v-mailchimp-subscribe-editor="content">Configure Mailhimp</div>
+    <div v-if="inEditor" v-mailchimp-subscribe-editor="content">Configure mailchimp</div>
     <div class="mailchimp-subscribe-form__fields">
       <form-fields
         :form-values="formValues"
