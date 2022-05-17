@@ -56,7 +56,7 @@ export default {
       return this.content.mailchimp
         ? this.content.mailchimp.fields.map(f => ({
           type: f.id === 'email' ? "email" :"text",
-          label: f.name ,name: f.id, required: f.required}))
+          label: f.name ,name: f.id, required: f.required, placeholder: f.placeholder}))
         : [];
     },
     formValues() {

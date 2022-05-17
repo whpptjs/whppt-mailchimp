@@ -27,6 +27,7 @@
     <div class="whppt-contents__actions">
       <whppt-text-input id="mailchimp-field-id" v-model="newFieldId" label="Field id" />
       <whppt-text-input id="mailchimp-field-name" v-model="newFieldName" label="Field name" />
+      <whppt-text-input id="mailchimp-field-placeholder" v-model="newFieldPlaceholder" label="Field placeholder" />
       <whppt-checkbox v-model="newFieldRequired" label="Required" />
       <whppt-button @click="() => addField()"><add /> Add Custom Field</whppt-button>
       <div v-if="error" class="error">{{ error }}</div>
@@ -70,6 +71,7 @@ export default {
       newFieldId: '',
       newFieldName: '',
       newFieldRequired: false,
+      newFieldPlaceholder: '',
       error: '',
       loading: false,
       success: false,
@@ -99,11 +101,20 @@ export default {
     addField() {
       this.error = '';
       if (!this.newFieldId) return (this.error = 'An ID for the field is required!');
-      const items = [...this.fields, { id: this.newFieldId, name: this.newFieldName, required: this.newFieldRequired }];
+      const items = [
+        ...this.fields,
+        {
+          id: this.newFieldId,
+          name: this.newFieldName,
+          required: this.newFieldRequired,
+          placeholder: this.newFieldPlaceholder,
+        },
+      ];
       this.setFields(items);
       this.newFieldId = '';
       this.newFieldName = '';
       this.newFieldRequired = false;
+      this.newFieldPlaceholder = '';
     },
     removeItem(item) {
       if (window.confirm('Are you sure?')) {
